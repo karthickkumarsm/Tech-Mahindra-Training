@@ -133,7 +133,7 @@ public class Main {
 
     public static void insertRecord() throws SQLException {
 
-        String query = "insert into employee values(34, 'MCCA',720000,'AAA');";
+        String query = "insert into employee values(36, 'CA',72000,'AAA');";
         Connection connect = DriverManager.
                 getConnection(url,username,password);
         Statement st = connect.createStatement();
@@ -178,7 +178,7 @@ public class Main {
 
     public static void deleteRecord() throws SQLException {
 
-        String query = "delete from employee where emp_id=11;";
+        String query = "delete from employee where emp_id=34;";
         Connection connect = DriverManager.
                 getConnection(url,username,password);
         Statement st = connect.createStatement();
