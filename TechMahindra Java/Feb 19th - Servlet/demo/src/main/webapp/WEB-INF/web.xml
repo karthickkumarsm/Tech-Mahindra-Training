@@ -14,7 +14,7 @@
     </servlet>
 
     <servlet>
-        <servlet-name>Welcome</servlet-name>
+        <servlet-name>Welcome1</servlet-name>
         <servlet-class>com.learning.springboot.demo.demo.WelcomeUser</servlet-class>
     </servlet>
 
@@ -24,7 +24,7 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>Welcome</servlet-name>
+        <servlet-name>Welcome1</servlet-name>
         <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
 
@@ -68,5 +68,60 @@
         <param-name> p2  </param-name>
         <param-value> AIA </param-value>
     </context-param>
+    <servlet>
+        <servlet-name>Validate</servlet-name>
+        <servlet-class>com.learning.springboot.demo.demo.Validate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Welcome</servlet-name>
+        <servlet-class>com.learning.springboot.demo.demo.Welcome</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Validate</servlet-name>
+        <url-pattern>/Validate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Welcome</servlet-name>
+        <url-pattern>/Welcome</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SetUrlParameterServlet</servlet-name>
+        <servlet-class>com.learning.springboot.demo.demo.SetUrlParameterServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>GetUrlParameterServlet</servlet-name>
+        <servlet-class>com.learning.springboot.demo.demo.GetUrlParameterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SetUrlParameterServlet</servlet-name>
+        <url-pattern>/SetUrlParameterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GetUrlParameterServlet</servlet-name>
+        <url-pattern>/GetUrlParameterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateCookieServlet</servlet-name>
+        <servlet-class>com.learning.springboot.demo.demo.CreateCookieServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <servlet-class>com.learning.springboot.demo.demo.GetCookieServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateCookieServlet</servlet-name>
+        <url-pattern>/CreateCookieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <url-pattern>/GetCookieServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

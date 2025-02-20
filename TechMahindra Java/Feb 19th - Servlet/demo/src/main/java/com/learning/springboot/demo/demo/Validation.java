@@ -21,7 +21,7 @@ public class Validation extends HttpServlet {
         String name = request.getParameter("uname");
         String pass = request.getParameter("upass");
 
-        if (name.equals("Chaitanya") && pass.equals("beginnersbook")) {
+        if (name.equals("abc") && pass.equals("123")) {
             RequestDispatcher dis = request.getRequestDispatcher("welcome");
             dis.forward(request, response);
         } else {
