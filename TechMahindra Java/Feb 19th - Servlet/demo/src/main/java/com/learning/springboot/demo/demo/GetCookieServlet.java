@@ -8,24 +8,24 @@ import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 public class GetCookieServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-
-        // Get cookies from the request object.
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
+        try {
+            Cookie[] cookies = request.getCookies();
             for (Cookie cookie : cookies) {
-                out.println(cookie.getName() + ": " + cookie.getValue() + "<br>");
+                out.println("Cookie Name: " + cookie.getName());
+                out.println("Cookie Value: " + cookie.getValue());
+                out.println("");
+                out.println("Click on the below button to delete cookies.");
+                out.print("<form action='DeleteCookieServlet' method='POST'>");
+                out.print("<input type='submit' value='Delete Cookies'>");
+                out.print("</form>");
             }
-        } else {
-            out.println("No cookies found.");
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        out.close();
     }
 }

@@ -124,4 +124,42 @@
         <url-pattern>/GetCookieServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>
+            com.learning.springboot.demo.demo.WelcomeServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/WelcomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteCookieServlet</servlet-name>
+        <servlet-class>
+            com.learning.springboot.demo.demo.DeleteCookieServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteCookieServlet</servlet-name>
+        <url-pattern>/DeleteCookieServlet</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>
+            com.learning.springboot.demo.demo.MyFilter
+        </filter-class>
+        <init-param>
+            <param-name>appUser</param-name>
+            <param-value>jai</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/WelcomeServlet</url-pattern>
+    </filter-mapping>
+
 </web-app>
