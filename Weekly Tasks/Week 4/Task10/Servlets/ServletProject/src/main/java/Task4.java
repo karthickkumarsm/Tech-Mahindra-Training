@@ -14,7 +14,7 @@ public class Task4 extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         
-        String filePath = "C:\\Users\\aksha\\Desktop\\Tech M Task Java Full stack\\Core Java Consolidated Tasks - 22 Feb '25\\Task10\\Servlets\\index.html"; // Change to the actual path
+        String filePath = "C:\\Users\\Karthi\\Core Java Consolidated Tasks - 22 Feb '25\\Task10\\Servlets\\index.html"; // Change to the actual path
         String content = new String(Files.readAllBytes(Paths.get(filePath)));
 
         out.println(content);
