@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="p-4">
+    <div id="product-container" class="row g-4"></div>
+
+    <script>
+      // Function to generate product divs
+      document.addEventListener("DOMContentLoaded", function () {
+        const productContainer = document.getElementById("product-container");
+
+        for (let i = 1; i <= 30; i++) {
+          const productDiv = document.createElement("div");
+          productDiv.className = "col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 product";
+
+          // Product content
+          productDiv.innerHTML = `
+            <h3>Product ${i}</h3>
+            <button class="btn btn-primary">Add to Cart</button>
+          `;
+
+          productContainer.appendChild(productDiv);
+        }
+      });
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
