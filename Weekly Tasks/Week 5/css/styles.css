@@ -301,7 +301,7 @@ body {
 
 @media (max-width: 768px) {
   .fancy-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .exercise-item {
     flex-direction: column;
