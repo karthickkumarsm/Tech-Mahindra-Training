@@ -1,0 +1,8 @@
+<div>
+  <h2>Child Component</h2>
+  <table>
+    <tr *ngFor="let product of products" (click)="moveProduct(product)">
+      <td>{{ product }}</td>
+    </tr>
+  </table>
+</div>
