@@ -1,5 +1,5 @@
 import { contact } from '../model/contact';
-const contacts:contact[] = [
+export const contacts:contact[] = [
     {
     name: "Chennai Development Center",
     address: "No. 5/639, Old Mahabalipuram Road,",
@@ -9,19 +9,19 @@ const contacts:contact[] = [
     image: "chennai.jpg",
     },
     {
-    name: "Mumbai Corporate Office",
+    name: "Madurai Corporate Office",
     address: "Unit No. 701, 7th Floor, B-Wing,",
     city: "Mumbai",
     state: "Maharashtra",
     phone: "022-6645-1234",
-    image: "mumbai.jpg",
+    image: "madurai.jpg",
     },
     {
-        name:"Hyderabad Development Center",
+        name:"Coimbatore Development Center",
         address:"Plot No. 32, Hitech City Main Road",
         city:"Hyderabad",
         state:"Telangana",
         phone:"040-6789-3456",
-        image:"hyderabad.jpg",
+        image:"coimbatore.jpg",
     }
 ]
