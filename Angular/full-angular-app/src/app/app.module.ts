@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceCardComponent } from './pages/home/service-card/service-card.component';
 import { EnqiryFormComponent } from './pages/home/enqiry-form/enqiry-form.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './common/login/login.component';
+import { EnquiriesComponent } from './pages/enquiries/enquiries.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FormsModule } from '@angular/forms';
     MenuBarComponent,
     ContactItemComponent,
     ServiceCardComponent,
-    EnqiryFormComponent
+    EnqiryFormComponent,
+    LoginComponent,
+    EnquiriesComponent
   ],
   imports: [
     BrowserModule,
