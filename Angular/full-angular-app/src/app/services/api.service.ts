@@ -20,4 +20,8 @@ export class ApiService {
   getEnquiries():Observable<any>{
     return this.http.get('http://localhost:4500/enquiries');
   }
+  getProjects(): Observable<any> {
+    return this.http.get('http://localhost:4500/projects');
+  }
+
 }

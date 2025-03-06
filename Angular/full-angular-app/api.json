@@ -37,6 +37,108 @@
       "image": "market.jpg"
     }
   ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project 1",
+      "description": "Project 1 description",
+      "status": "active",
+      "startDate": "2021-01-01",
+      "endDate": "2021-01-31",
+      "teamSize": 10,
+      "image": "market.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "description": "Project 2 description",
+      "status": "completed",
+      "startDate": "2021-02-01",
+      "endDate": "2021-02-28",
+      "teamSize": 8,
+      "image": "ecommerce.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "description": "Project 3 description",
+      "status": "active",
+      "startDate": "2021-03-01",
+      "endDate": "2021-03-31",
+      "teamSize": 12,
+      "image": "digital.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Project 4",
+      "description": "Project 4 description",
+      "status": "completed",
+      "startDate": "2021-04-01",
+      "endDate": "2021-04-30",
+      "teamSize": 7,
+      "image": "films.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Project 5",
+      "description": "Project 5 description",
+      "status": "active",
+      "startDate": "2021-05-01",
+      "endDate": "2021-05-31",
+      "teamSize": 9,
+      "image": "inbound.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Project 6",
+      "description": "Project 6 description",
+      "status": "completed",
+      "startDate": "2021-06-01",
+      "endDate": "2021-06-30",
+      "teamSize": 11,
+      "image": "branding.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Project 7",
+      "description": "Project 7 description",
+      "status": "active",
+      "startDate": "2021-07-01",
+      "endDate": "2021-07-31",
+      "teamSize": 6,
+      "image": "market.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Project 8",
+      "description": "Project 8 description",
+      "status": "completed",
+      "startDate": "2021-08-01",
+      "endDate": "2021-08-31",
+      "teamSize": 10,
+      "image": "ecommerce.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Project 9",
+      "description": "Project 9 description",
+      "status": "active",
+      "startDate": "2021-09-01",
+      "endDate": "2021-09-30",
+      "teamSize": 8,
+      "image": "films.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Project 10",
+      "description": "Project 10 description",
+      "status": "completed",
+      "startDate": "2021-10-01",
+      "endDate": "2021-10-31",
+      "teamSize": 7,
+      "image": "digital.jpg"
+    }
+  ],
   "enquiries": [
     {
       "id": "ef47",
@@ -44,8 +146,7 @@
       "email": "joseph@gmail.com",
       "serviceType": "Web Development",
       "message": "We need an ecommerce site to be done"
-    }
-    ,
+    },
     {
       "id": "ef48",
       "name": "Alice",

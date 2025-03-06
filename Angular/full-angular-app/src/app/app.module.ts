@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,6 +16,9 @@ import { LoginComponent } from './common/login/login.component';
 import { EnquiriesComponent } from './pages/enquiries/enquiries.component';
 import { FilterservicePipe } from './pipes/filterservice.pipe';
 import { HighlightPipe } from './pipes/highlight.pipe';
+import { ProjectCardComponent } from './pages/projects/project-card/project-card.component';
+import { ProjectStatusPipe } from './pipes/project-status.pipe';
+import { TeamSizePipe } from './pipes/team-size.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { HighlightPipe } from './pipes/highlight.pipe';
     LoginComponent,
     EnquiriesComponent,
     FilterservicePipe,
-    HighlightPipe
+    HighlightPipe,
+    ProjectStatusPipe,
+    TeamSizePipe,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
