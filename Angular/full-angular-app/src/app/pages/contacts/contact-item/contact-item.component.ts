@@ -8,6 +8,6 @@ import { contact } from '../../../model/contact';
 })
 export class ContactItemComponent {
   @Input() contact:contact={
-      name:"",city:"",state:"",address:"",phone:"",image:""
+      name:"",city:"",state:"",address:"",phone:"",image:""	
     }
 }

@@ -1,0 +1,49 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Branding and Communication",
+      "description": "We help brands connect and engage by finding a unique voice in the market. From strategy and positioning to logo and graphic design to advertising campaigns, we produce identity and communications materials that build credibility, as well as sales.",
+      "image": "branding.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Inbound &  Content Marketing",
+      "description": "We have a team of inbound-certified content experts, writers and designers who know your market and can develop an inbound marketing strategy that will help you attract visitors to your website, convert them into leads and then into customers.",
+      "image": "inbound.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Film &  Webinar",
+      "description": "Our talent pool includes musicians, song writers and video technicians who can create unique soundtracks for your corporate films or put together a YouTube video that showcases your products or company. We also help you create, host and promote webinars and podcasts or live streaming programs.",
+      "image": "films.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Digital Marketing",
+      "description": "WE can help tie your online and offline branding together with digital and social media services, pay per click (PPC), SEO/SEM or Google Adwords.  At UP we work with all social media networks, and can help you with both your paid activities and organic presence. ",
+      "image": "digital.jpg"
+    },
+    {
+      "id": 5,
+      "title": "ECommerce & Websites",
+      "description": "We provide full website design and development services, including UX design and ecommerce. Our team can set up CMS systems, including HubSpot, WordPress, Drupal and more.  ",
+      "image": "ecommerce.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Market Analysis",
+      "description": "UP starts all major marketing, branding, advertising and creative service projects with a thorough briefing process and market research. This phase might include customer research or a START ME UP workshop.  UP LAB also offers in-depth analysis and market insights to help you understand your customers. ",
+      "image": "market.jpg"
+    }
+  ],
+  "enquiries": [
+    {
+      "id": "7a4d",
+      "name": "AppVista",
+      "email": "appvista2024@gmail.com",
+      "serviceType": "Web Development",
+      "message": "hi i need a website"
+    }
+  ]
+}

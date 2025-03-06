@@ -7,5 +7,5 @@ import { contacts } from '../../data/info';
   styleUrl: './contacts.component.css'
 })
 export class ContactsComponent {
-  contactlist:contact[] = contacts
+  contactlist:contact[] = contacts 
 }

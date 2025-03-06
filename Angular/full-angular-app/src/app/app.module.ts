@@ -9,6 +9,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { MenuBarComponent } from './common/menu-bar/menu-bar.component';
 import { ContactItemComponent } from './pages/contacts/contact-item/contact-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiceCardComponent } from './pages/home/service-card/service-card.component';
+import { EnqiryFormComponent } from './pages/home/enqiry-form/enqiry-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { ContactItemComponent } from './pages/contacts/contact-item/contact-item
     AboutComponent,
     ContactsComponent,
     MenuBarComponent,
-    ContactItemComponent
+    ContactItemComponent,
+    ServiceCardComponent,
+    EnqiryFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

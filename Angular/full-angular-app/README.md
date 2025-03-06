@@ -1,27 +1,51 @@
-# FullAngularApp
+#Routing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
+/
+/app
+/about
 
-## Development server
+top level routes, root leve
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+/app/module1
+/app/feature2  
 
-## Code scaffolding
+child routes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+top level routing -> RouterModule.forRoot()
+child level routing -> RouterModule.forChildren()
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Services
 
-## Running unit tests
+A Service is angular future which is basically a class
+with functions that could be used reusably across multiple
+components
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+in other words a service provides reusable features to multiple components
 
-## Running end-to-end tests
+A service need to be injected in to the component in order to use it
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+we follow constructor inject 
 
-## Further help
+By default services are singleton (everywhere if you inject
+you will get same object)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+but if you want a different object that could also be done
+
+
+#### HttpClient Module
+
+##### HttpClient service 
+
+using this service we can call api using get,post,put,delete....methods
+
+and all of this methods return object of type Observable
+
+### Observable
+
+In reactive programming(asynchronous coding), Observable is
+an object which listens to responses and process it as an when
+the original function sends it 
+
+this is used for processing logic that requires time and where
+data cannot be returned immediatly
