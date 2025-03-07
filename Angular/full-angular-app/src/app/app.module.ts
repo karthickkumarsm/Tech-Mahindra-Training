@@ -11,7 +11,7 @@ import { ContactItemComponent } from './pages/contacts/contact-item/contact-item
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceCardComponent } from './pages/home/service-card/service-card.component';
 import { EnqiryFormComponent } from './pages/home/enqiry-form/enqiry-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './common/login/login.component';
 import { EnquiriesComponent } from './pages/enquiries/enquiries.component';
 import { FilterservicePipe } from './pipes/filterservice.pipe';
@@ -47,7 +47,8 @@ import { EnquiryResponseComponent } from './pages/enquiries/enquiry-response/enq
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
