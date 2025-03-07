@@ -19,6 +19,8 @@ import { HighlightPipe } from './pipes/highlight.pipe';
 import { ProjectCardComponent } from './pages/projects/project-card/project-card.component';
 import { ProjectStatusPipe } from './pipes/project-status.pipe';
 import { TeamSizePipe } from './pipes/team-size.pipe';
+import { ServiceDetailsComponent } from './pages/home/service-details/service-details.component';
+import { EnquiryResponseComponent } from './pages/enquiries/enquiry-response/enquiry-response.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { TeamSizePipe } from './pipes/team-size.pipe';
     HighlightPipe,
     ProjectStatusPipe,
     TeamSizePipe,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ServiceDetailsComponent,
+    EnquiryResponseComponent
   ],
   imports: [
     BrowserModule,

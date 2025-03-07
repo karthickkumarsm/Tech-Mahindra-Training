@@ -23,5 +23,8 @@ export class ApiService {
   getProjects(): Observable<any> {
     return this.http.get('http://localhost:4500/projects');
   }
+getDetails(id:string):Observable<any>{
+  return this.http.get(`http://localhost:4500/details?id=${id}`);
+}
 
 }

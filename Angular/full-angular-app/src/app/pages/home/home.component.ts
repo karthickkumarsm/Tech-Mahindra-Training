@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { service } from '../../model/service';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,23 @@ import { ApiService } from '../../services/api.service';
 export class HomeComponent {
   serviceslist:service[] = []
 
-  constructor(private api:ApiService){
-  
+  constructor(private api:ApiService, private router:Router){
+
   }
 
-  ngOnInit(){ 
+  ngOnInit(){
       this.api.getServices().subscribe({
           next:(result:service[])=>this.serviceslist = result,
           error:(error)=>console.log(error)
       });
+
+  }
+  onServiceClick(id:string){
+    const selectedService =
+    this.serviceslist.find(service => service.id === id);
+    if (selectedService) {
+      this.router.navigate(['/services', id], { state: { title: selectedService.title } });
+    }
 
   }
 }
