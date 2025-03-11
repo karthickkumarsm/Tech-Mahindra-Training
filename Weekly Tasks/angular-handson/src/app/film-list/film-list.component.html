@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Film Collection</h2>
+  <!-- <div class="form-group">
+    <label for="exactRating">Exact Rating</label>
+    <select [(ngModel)]="exactRating" name="exactRating" class="form-control">
+      <option [ngValue]="null">All Ratings</option>
+      <option [value]="1">1</option>
+      <option [value]="2">2</option>
+      <option [value]="3">3</option>
+      <option [value]="4">4</option>
+      <option [value]="5">5</option>
+    </select>
+  </div> -->
+  <div class="form-group">
+    <label for="exactYear">Year</label>
+    <input [(ngModel)]="exactYear" name="exactYear" type="number" class="form-control" placeholder="Enter a year">
+  </div>
+  <ul class="list-group">
+    <li *ngFor="let film of films | filterByYear:exactYear" class="list-group-item">
+      <app-film-item [film]="film"></app-film-item>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="film.imageUrl" class="img-fluid rounded-start" alt="{{ film.title }}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <p class="card-text">Directed by: {{ film.director }}</p>
+        <p class="card-text">Year: {{ film.year }}</p>
+        <p class="card-text">Rating: {{ film.rating }}</p>
+      </div>
+    </div>
+  </div>
+</div>

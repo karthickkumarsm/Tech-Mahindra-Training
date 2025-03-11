@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Routines - MyFitnessPal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../assets/images/diet.jpg" type="image/x-icon" />
+    <style>
+      .quote-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-top: 100px;
+        text-align: center;
+      }
+      .quote-card h3 {
+        font-size: 1.8rem;
+        color: #690ac2;
+        margin-bottom: 1rem;
+      }
+      .quote-card p {
+        font-size: 1.2rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="logo-text">MyFitnessPal</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="create-routine.html">Create Routine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="my-routines.html">My Routines</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="progress-tracker.html">Track Your Progress</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main style="margin-top: 70px;">
+      <div class="quote-card" id="quoteCard">
+        <h3>Motivational Quote</h3>
+        <p id="quoteText"></p>
+      </div>
+      <section class="my-routines">
+        <h1 class="fancy-title">My Routines</h1>
+        <div class="routine-grid" id="routineGrid"></div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const quotes = [
+          "The only bad workout is the one that didn't happen.",
+          "Push yourself because no one else is going to do it for you.",
+          "Success is what comes after your stop making excuses.",
+          "Strength does not come from physical capacity. It comes from an indomitable will.",
+          "Your body can stand almost anything. It’s your mind that you have to convince."
+        ];
+        const quoteText = document.getElementById('quoteText');
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteText.textContent = quotes[randomIndex];
+
+        const title = document.querySelector('.fancy-title');
+        const text = title.textContent;
+        title.innerHTML = '';
+        for (let i = 0; i < text.length; i++) {
+          const span = document.createElement('span');
+          span.textContent = text[i];
+          span.style.animationDelay = `${i * 0.05}s`;
+          title.appendChild(span);
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/my-routines.js"></script>
+  </body>
+</html>

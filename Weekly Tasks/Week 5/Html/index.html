@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Routine Planner - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../assets/images/diet.jpg" type="image/x-icon" />
+    <style>
+      .fancy-title span {
+        display: inline-block;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fancy-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+        animation: infinite 2s alternate slide;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        color: #ffffff;
+        opacity: 0.9;
+        margin-right: 20px;
+      }
+
+      .blog-section {
+        background: #fff;
+        padding: 2rem 0;
+        position: relative;
+        z-index: 3;
+        text-align: center;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .blog-post {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .blog-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .blog-post img {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px 8px 0 0;
+        object-fit: cover;
+      }
+
+      .blog-post-content {
+        padding: 1.5rem;
+      }
+
+      .blog-title {
+        color: #333;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .blog-snippet {
+        color: #666;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="logo-text">MyFitnessPal</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="create-routine.html">Create Routine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="my-routines.html">My Routines</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="progress-tracker.html">Track Your Progress</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div>
+            <h1 class="fancy-title">Plan Your Fitness Journey</h1>
+            <p class="subtitle">Create personalized workout routines and track your progress</p>
+          </div>
+          <a href="create-routine.html" class="btn btn-primary mt-3">Start Planning Now</a>
+        </div>
+      </section>
+
+      <section class="blog-section">
+        <h2 class="section-title">Latest Blog Posts</h2>
+        <div class="blog-grid" id="blogPosts">
+          <div class="blog-post">
+            <img src="../assets/images/workout2.jpg" alt="Blog Post 1 Image">
+            <div class="blog-post-content">
+              <h3 class="blog-title">The Benefits of HIIT Workouts</h3>
+              <p class="blog-snippet">HIIT workouts are great for burning calories, improving cardiovascular health, and boosting metabolism. Discover the benefits and how to get started...</p>
+            </div>
+          </div>
+          <div class="blog-post">
+            <img src="../assets/images/workout1.jpg" alt="Blog Post 2 Image">
+            <div class="blog-post-content">
+              <h3 class="blog-title">Strength Training for Beginners</h3>
+              <p class="blog-snippet">Strength training is essential for building muscle and improving overall fitness. Learn the basics and start your journey today...</p>
+            </div>
+          </div>
+          <div class="blog-post">
+            <img src="../assets/images/workout3.jpg" alt="Blog Post 3 Image">
+            <div class="blog-post-content">
+              <h3 class="blog-title">Nutrition Tips for a Healthy Lifestyle</h3>
+              <p class="blog-snippet">Nutrition plays a crucial role in your fitness journey. Get expert tips on how to eat healthily and fuel your body for optimal performance...</p>
+            </div>
+          </div>
+        </div>
+        <a href="blogs.html" class="btn btn-secondary mt-3">Read More</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 MyFitnessPal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const title = document.querySelector('.fancy-title');
+        const text = title.textContent;
+        title.innerHTML = '';
+        for (let i = 0; i < text.length; i++) {
+          const span = document.createElement('span');
+          span.textContent = text[i];
+          span.style.animationDelay = `${i * 0.05}s`;
+          title.appendChild(span);
+        }
+      });
+    </script>
+  </body>
+</html>
