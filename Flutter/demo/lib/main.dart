@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
               MaterialPageRoute(builder: (context) => FirstPage()),
             );
           },
-          child: Text('Go to First Page'),
+          child: Text('Go to First Page!'),
         ),
       ),
     );
