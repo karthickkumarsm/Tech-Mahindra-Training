@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ThirdPage extends StatefulWidget {
+  const ThirdPage({super.key});
+
   @override
   _ThirdPageState createState() => _ThirdPageState();
 }
@@ -30,7 +32,7 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third Page'),
+        title: const Text('Third Page'),
         backgroundColor: Colors.black87,
         foregroundColor: Colors.white,
       ),
@@ -42,44 +44,44 @@ class _ThirdPageState extends State<ThirdPage> {
             children: <Widget>[
               Text(
                 'Price: $_price',
-                style: TextStyle(fontSize: 24, color: Colors.white),
+                style: const TextStyle(fontSize: 24, color: Colors.white),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _increasePrice,
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero,
                   ),
-                  fixedSize: Size.fromWidth(150)
+                  fixedSize: const Size.fromWidth(150)
                 ),
-                child: Text('Increase Price'),
+                child: const Text('Increase Price'),
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.blueGrey,
                   backgroundColor: Colors.yellowAccent,
-                   shape: RoundedRectangleBorder(
+                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero,
                   ),
-                  fixedSize: Size.fromWidth(150)
+                  fixedSize: const Size.fromWidth(150)
                 ),
                 onPressed: _decreasePrice,
-                child: Text('Decrease Price'),
+                child: const Text('Decrease Price'),
               ),
               ElevatedButton(
                  style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.orangeAccent,
-                   shape: RoundedRectangleBorder(
+                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero,
                   ),
-                  fixedSize: Size.fromWidth(150)
+                  fixedSize: const Size.fromWidth(150)
                 ),
                 onPressed: _multiplyPrice,
-                child: Text('Multiply Price'),
+                child: const Text('Multiply Price'),
               ),
             ],
           ),

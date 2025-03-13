@@ -18,7 +18,7 @@ class _FifthPageState extends State<FifthPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fifth Page - Book Form'),
+        title: const Text('Fifth Page - Book Form'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,7 +29,7 @@ class _FifthPageState extends State<FifthPage> {
             children: <Widget>[
               TextFormField(
                 controller: _bookNameController,
-                decoration: InputDecoration(labelText: 'Book Name'),
+                decoration: const InputDecoration(labelText: 'Book Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a book name';
@@ -39,7 +39,7 @@ class _FifthPageState extends State<FifthPage> {
               ),
               DropdownButtonFormField<String>(
                 value: _selectedCategory,
-                decoration: InputDecoration(labelText: 'Category'),
+                decoration: const InputDecoration(labelText: 'Category'),
                 items: <String>['Fiction', 'Literature', 'Biography', 'Sports']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
@@ -55,7 +55,7 @@ class _FifthPageState extends State<FifthPage> {
               ),
               TextFormField(
                 controller: _priceController,
-                decoration: InputDecoration(labelText: 'Price'),
+                decoration: const InputDecoration(labelText: 'Price'),
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -66,7 +66,7 @@ class _FifthPageState extends State<FifthPage> {
               ),
               TextFormField(
                 controller: _authorController,
-                decoration: InputDecoration(labelText: 'Author'),
+                decoration: const InputDecoration(labelText: 'Author'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter the author\'s name';
@@ -74,7 +74,7 @@ class _FifthPageState extends State<FifthPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
@@ -91,7 +91,7 @@ class _FifthPageState extends State<FifthPage> {
                     );
                   }
                 },
-                child: Text('Store Book'),
+                child: const Text('Store Book'),
               ),
             ],
           ),

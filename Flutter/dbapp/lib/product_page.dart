@@ -8,13 +8,13 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Products'),
+        title: const Text('Products'),
       ),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: DatabaseHelper().getProducts(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
           var products = snapshot.data!;
           return ListView.builder(
@@ -36,7 +36,7 @@ class ProductPage extends StatelessWidget {
             MaterialPageRoute(builder: (context) => AddProductPage()),
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

@@ -20,7 +20,7 @@ class _SeventhPageState extends State<SeventhPage> {
   void initState() {
     super.initState();
     _fetchQuote();
-    _timer = Timer.periodic(Duration(seconds: 15), (Timer t) => _fetchQuote());
+    _timer = Timer.periodic(const Duration(seconds: 15), (Timer t) => _fetchQuote());
   }
 
   @override
@@ -50,7 +50,7 @@ class _SeventhPageState extends State<SeventhPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Seventh Page - Random Quote'),
+        title: const Text('Seventh Page - Random Quote'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -60,27 +60,27 @@ class _SeventhPageState extends State<SeventhPage> {
           children: <Widget>[
             if (_quote.isNotEmpty) ...[
               Text(
-                '$_quote',
-                style: TextStyle(
+                _quote,
+                style: const TextStyle(
                   fontSize: 24,
                   fontStyle: FontStyle.italic,
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 '- $_author',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.right,
               ),
             ],
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _fetchQuote,
-              child: Text('Change Quote'),
+              child: const Text('Change Quote'),
             ),
           ],
         ),

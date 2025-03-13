@@ -13,7 +13,7 @@ class _CountDownState extends State<CountDown> {
   Timer? _timer;
 
   void _startTimer() {
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         if (_counter > 0) {
           _counter--;
@@ -39,14 +39,14 @@ class _CountDownState extends State<CountDown> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         decoration: BoxDecoration(
           color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(
           '$_counter',
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 48,
             fontWeight: FontWeight.bold,
             color: Colors.white,

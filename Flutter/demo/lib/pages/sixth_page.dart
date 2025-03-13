@@ -17,20 +17,20 @@ class SixthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sixth Page - Book Details'),
+        title: const Text('Sixth Page - Book Details'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Book Name: $bookName', style: TextStyle(fontSize: 18)),
-            SizedBox(height: 10),
-            Text('Category: $category', style: TextStyle(fontSize: 18)),
-            SizedBox(height: 10),
-            Text('Price: $price', style: TextStyle(fontSize: 18)),
-            SizedBox(height: 10),
-            Text('Author: $author', style: TextStyle(fontSize: 18)),
+            Text('Book Name: $bookName', style: const TextStyle(fontSize: 18)),
+            const SizedBox(height: 10),
+            Text('Category: $category', style: const TextStyle(fontSize: 18)),
+            const SizedBox(height: 10),
+            Text('Price: $price', style: const TextStyle(fontSize: 18)),
+            const SizedBox(height: 10),
+            Text('Author: $author', style: const TextStyle(fontSize: 18)),
           ],
         ),
       ),

@@ -10,6 +10,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
         primarySwatch: Colors.blue,
         colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.orange),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           headlineSmall: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
           titleLarge: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
           bodyLarge: TextStyle(fontSize: 16.0),
@@ -30,11 +32,13 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
    return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
         backgroundColor: Colors.green,
       ),
       body: Column(
@@ -44,19 +48,19 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => FirstPage()),
+                MaterialPageRoute(builder: (context) => const FirstPage()),
               );
             },
-            child: Text('Go to First Page'),
+            child: const Text('Go to First Page'),
           ),
           TextButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SecondPage()),
+                MaterialPageRoute(builder: (context) => const SecondPage()),
               );
             },
-            child: Text('Go to Second Page'),
+            child: const Text('Go to Second Page'),
           ),
              ElevatedButton.icon(
             onPressed: () {
@@ -65,24 +69,24 @@ class HomePage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => ThirdPage()),
               );
             },
-            icon: Icon(Icons.navigate_next),
-            label: Text('Go to Third Page'),
+            icon: const Icon(Icons.navigate_next),
+            label: const Text('Go to Third Page'),
           )
       ,
       GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => FourthPage()),
+                MaterialPageRoute(builder: (context) => const FourthPage()),
               );
             },
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Text(
+              child: const Text(
                 'Go to Fourth Page',
                 style: TextStyle(color: Colors.white),
               ),

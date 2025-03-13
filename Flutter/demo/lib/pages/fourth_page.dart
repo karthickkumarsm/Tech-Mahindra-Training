@@ -6,14 +6,14 @@ class FourthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fourth Page - Layouts'),
+        title: const Text('Fourth Page - Layouts'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               'Row Layout:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -37,8 +37,8 @@ class FourthPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Column Layout:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -49,24 +49,24 @@ class FourthPage extends StatelessWidget {
                   color: Colors.blue,
                   height: 50,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
                   color: Colors.red,
                   height: 50,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
                   color: Colors.green,
                   height: 50,
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Stack Layout:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            Container(
+            SizedBox(
               height: 150,
               child: Stack(
                 children: <Widget>[
@@ -96,8 +96,8 @@ class FourthPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Grid Layout:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -106,7 +106,7 @@ class FourthPage extends StatelessWidget {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(), // Prevents nested scrolling
+              physics: const NeverScrollableScrollPhysics(), // Prevents nested scrolling
               children: <Widget>[
                 Container(color: Colors.blue),
                 Container(color: Colors.red),
@@ -116,8 +116,8 @@ class FourthPage extends StatelessWidget {
                 Container(color: Colors.yellow),
               ],
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'More Content to Test Scrolling:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -125,22 +125,22 @@ class FourthPage extends StatelessWidget {
               color: Colors.blue[100],
               height: 100,
               width: double.infinity,
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Center(child: Text('Extra Content 1')),
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: const Center(child: Text('Extra Content 1')),
             ),
             Container(
               color: Colors.red[100],
               height: 100,
               width: double.infinity,
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Center(child: Text('Extra Content 2')),
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: const Center(child: Text('Extra Content 2')),
             ),
             Container(
               color: Colors.green[100],
               height: 100,
               width: double.infinity,
-              margin: EdgeInsets.symmetric(vertical: 10),
-              child: Center(child: Text('Extra Content 3')),
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: const Center(child: Text('Extra Content 3')),
             ),
           ],
         ),

@@ -8,7 +8,7 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Page'),
+        title: const Text('First Page'),
         backgroundColor: Colors.blue, // Set the color for the AppBar
       ),
       body:  Column(
@@ -18,19 +18,19 @@ class FirstPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => FifthPage()),
+                MaterialPageRoute(builder: (context) => const FifthPage()),
               );
             },
-            child: Text('Go to Fifth Page'),
+            child: const Text('Go to Fifth Page'),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SeventhPage()),
+                MaterialPageRoute(builder: (context) => const SeventhPage()),
               );
             },
-            child: Text('Go to Seventh Page'),
+            child: const Text('Go to Seventh Page'),
           ),
         ]
     ));
