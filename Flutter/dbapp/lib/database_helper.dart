@@ -29,7 +29,7 @@ class DatabaseHelper {
         id INTEGER PRIMARY KEY,
         name TEXT,
         description TEXT,
-        image_url TEXT
+        Image URL TEXT
       )
     ''');
   }

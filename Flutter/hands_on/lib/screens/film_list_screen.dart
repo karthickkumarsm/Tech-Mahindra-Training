@@ -27,19 +27,60 @@ class _FilmListScreenState extends State<FilmListScreen> {
     });
   }
 
+  Future<void> _deleteFilm(int id) async {
+    await _dbHelper.deleteFilm(id);
+    _loadFilms(); // Reload the films after deletion
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Film Collection'),
+        title: Text('Film Collection'),
       ),
       body: ListView.builder(
         itemCount: _films.length,
         itemBuilder: (context, index) {
           final film = _films[index];
           return ListTile(
+            leading: film.imagePath != null
+                ? Image.network(
+                    film.imagePath!,
+                    width: 50,
+                    height: 50,
+                    errorBuilder: (context, error, stackTrace) =>
+                        Icon(Icons.broken_image), // Handle broken URLs
+                  )
+                : Icon(Icons.movie), // Placeholder for missing images
             title: Text(film.title),
             subtitle: Text(film.director),
+            trailing: IconButton(
+              icon: Icon(Icons.delete, color: Colors.red),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    title: Text('Delete Film'),
+                    content: Text('Are you sure you want to delete this film?'),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(ctx).pop(); // Close dialog
+                        },
+                        child: Text('Cancel'),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(ctx).pop(); // Close dialog
+                          _deleteFilm(film.id!); // Delete the film
+                        },
+                        child: Text('Delete'),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           );
         },
       ),
@@ -50,7 +91,7 @@ class _FilmListScreenState extends State<FilmListScreen> {
           );
           _loadFilms();
         },
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }

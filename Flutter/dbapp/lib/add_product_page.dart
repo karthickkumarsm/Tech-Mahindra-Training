@@ -27,7 +27,7 @@ class _AddProductPageState extends State<AddProductPage> {
       await DatabaseHelper().insertProduct({
         'name': _nameController.text,
         'description': _descriptionController.text,
-        'image_url': _imageUrlController.text,
+        'Image URL': _imageUrlController.text,
       });
       Navigator.pop(context);
     }

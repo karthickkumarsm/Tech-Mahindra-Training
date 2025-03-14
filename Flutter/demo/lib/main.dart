@@ -6,7 +6,7 @@ import 'pages/second_page.dart';
 import 'pages/third_page.dart';
 import 'pages/fourth_page.dart';
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           labelLarge: TextStyle(fontSize: 18.0, color: Colors.white),
         ),
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ThirdPage()),
+                MaterialPageRoute(builder: (context) => const ThirdPage()),
               );
             },
             icon: const Icon(Icons.navigate_next),

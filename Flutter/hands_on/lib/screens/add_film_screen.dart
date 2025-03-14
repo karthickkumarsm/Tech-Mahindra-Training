@@ -13,13 +13,14 @@ class _AddFilmScreenState extends State<AddFilmScreen> {
   final _formKey = GlobalKey<FormState>();
   String _title = '';
   String _director = '';
+  String? _imageUrl;
   final _dbHelper = DatabaseHelper();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Film'),
+        title: Text('Add Film'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -28,7 +29,7 @@ class _AddFilmScreenState extends State<AddFilmScreen> {
           child: Column(
             children: [
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Film Title'),
+                decoration: InputDecoration(labelText: 'Film Title'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a film title';
@@ -40,7 +41,7 @@ class _AddFilmScreenState extends State<AddFilmScreen> {
                 },
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Director'),
+                decoration: InputDecoration(labelText: 'Director'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter the director\'s name';
@@ -51,17 +52,33 @@ class _AddFilmScreenState extends State<AddFilmScreen> {
                   _director = value!;
                 },
               ),
-              const SizedBox(height: 20),
+              TextFormField(
+                decoration: InputDecoration(labelText: 'Image URL'),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter an image URL';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _imageUrl = value!;
+                },
+              ),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    final film = Film(title: _title, director: _director);
+                    final film = Film(
+                      title: _title,
+                      director: _director,
+                      imagePath: _imageUrl, // Save the image URL
+                    );
                     _dbHelper.addFilm(film);
                     Navigator.of(context).pop();
                   }
                 },
-                child: const Text('Add Film'),
+                child: Text('Add Film'),
               ),
             ],
           ),

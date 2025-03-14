@@ -18,17 +18,32 @@ class DatabaseHelper {
   }
 
   Future<Database> _initDb() async {
-    final dbPath = await getDatabasesPath();
-    return openDatabase(
-      join(dbPath, 'films.db'),
-      onCreate: (db, version) {
-        return db.execute(
-          'CREATE TABLE films(id INTEGER PRIMARY KEY, title TEXT, director TEXT)',
-        );
-      },
-      version: 1,
-    );
-  }
+  final dbPath = await getDatabasesPath();
+  return openDatabase(
+    join(dbPath, 'films.db'),
+    version: 2, // Increment version to 2
+    onCreate: (db, version) async {
+      await db.execute(
+        'CREATE TABLE films(id INTEGER PRIMARY KEY, title TEXT, director TEXT, imagePath TEXT)',
+      );
+    },
+    onUpgrade: (db, oldVersion, newVersion) async {
+      if (oldVersion < 2) {
+        await db.execute('ALTER TABLE films ADD COLUMN imagePath TEXT');
+      }
+    },
+  );
+}
+
+Future<void> deleteFilm(int id) async {
+  final db = await database;
+  await db.delete(
+    'films',
+    where: 'id = ?',
+    whereArgs: [id],
+  );
+}
+
 
   Future<List<Film>> getFilms() async {
     final db = await database;
@@ -38,6 +53,7 @@ class DatabaseHelper {
         id: maps[i]['id'],
         title: maps[i]['title'],
         director: maps[i]['director'],
+        imagePath: maps[i]['imagePath'],
       );
     });
   }

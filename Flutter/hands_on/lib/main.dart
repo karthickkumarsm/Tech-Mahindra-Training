@@ -11,7 +11,7 @@ class FilmCollectionApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Film Collection',
+      title: 'Film Collection App',
       home: FilmListScreen(),
     );
   }

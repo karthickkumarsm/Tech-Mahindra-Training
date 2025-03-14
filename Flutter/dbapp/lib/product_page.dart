@@ -21,7 +21,7 @@ class ProductPage extends StatelessWidget {
             itemCount: products.length,
             itemBuilder: (context, index) {
               return ListTile(
-                leading: Image.network(products[index]['image_url']),
+                leading: Image.network(products[index]['Image URL']),
                 title: Text(products[index]['name']),
                 subtitle: Text(products[index]['description']),
               );
@@ -33,7 +33,7 @@ class ProductPage extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => AddProductPage()),
+            MaterialPageRoute(builder: (context) => const AddProductPage()),
           );
         },
         child: const Icon(Icons.add),
