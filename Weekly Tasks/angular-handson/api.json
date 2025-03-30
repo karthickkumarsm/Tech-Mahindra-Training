@@ -1,30 +1,6 @@
 {
   "films": [
     {
-      "id": "1",
-      "title": "The Shawshank Redemption",
-      "director": "Frank Darabont",
-      "year": 1994,
-      "imageUrl": "http://localhost:8090/shawshank.jpg",
-      "rating": 5
-    },
-    {
-      "id": "2",
-      "title": "The Godfather",
-      "director": "Francis Ford Coppola",
-      "year": 1972,
-      "imageUrl": "http://localhost:8090/godfather.jpg",
-      "rating": 4
-    },
-    {
-      "id": "3",
-      "title": "The Dark Knight",
-      "director": "Christopher Nolan",
-      "year": 2008,
-      "imageUrl": "http://localhost:8090/darkknight.jpg",
-      "rating": 5
-    },
-    {
       "id": 1741343831207,
       "title": "Dark Knight rises",
       "director": "Nolan",

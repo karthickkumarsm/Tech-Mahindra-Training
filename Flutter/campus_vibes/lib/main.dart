@@ -61,6 +61,7 @@ class _CampusVibesAppState extends State<CampusVibesApp> {
         return supportedLocales.first;
       },
       home: SignInScreen(onLocaleChange: setLocale),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
